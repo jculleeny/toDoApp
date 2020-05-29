@@ -1,17 +1,17 @@
-// Grabbing our empty unordered list tag
+/**** What's Next? ****
+-Add the <div> with the multiplication X to the end of each <li>
+-Add the ability to press the X to remove that specific <li>
+-Add a way to check off a finished item
+-Add a javascript hover for the X to show up and hide:
+    A.) Add CSS that hides the X div
+    B.) Add javascript to change the css state based on mouseOver
+*/
+
 const domList = document.getElementById( 'list' );
 const toDoInput = document.getElementById( 'todo-input' );
 const userList = []
 const form = document.forms['todo-list'];
-
-/* For testing
-const userList = [
-    'test',
-    'test',
-    'test',
-    'test'
-]
-*/
+const liDiv = document.querySelector( 'li div' );
 
 // Prevent the default ENTER/RETURN action of the <input> field
 toDoInput.addEventListener( 'keydown', ( event ) => {
@@ -36,6 +36,16 @@ toDoInput.addEventListener( 'keyup', ( event ) => {
     }
 })
 
+// Show the multiplication X when mouse is hovering
+domList.addEventListener( 'mouseover', ( event ) => {
+    liDiv.style.visibility = 'visible';
+})
+
+// Hide the multiplication X when the mouse is elsewhere
+domList.addEventListener( 'mouseleave', ( event ) => {
+    liDiv.style.visibility = 'hidden';
+})
+
 // Create LI Node with child Text and add text to userList ARRAY
 function createElement( toDoText ) {
     const el = document.createElement( 'li' );
@@ -45,7 +55,4 @@ function createElement( toDoText ) {
 
     domList.appendChild( el );
 }
-
-// This adds, upon keyup, an object to the toDoList
-//toDoInput.addEventListener( 'keyup', createElement );
 

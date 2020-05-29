@@ -34,12 +34,11 @@ body {
 h1 {
     font-size: 4rem;
     border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    line-height: 3rem;
+    line-height: 3.2rem;
 }
 
 label {
     margin: 20px;
-
     font-size: 2rem;
 }
 
@@ -73,11 +72,33 @@ ul {
 li {
     height: 50px;
     width: 500px;
+    margin: 5px;
+    padding-left: 15px;
     font-size: 1.5rem;
+    line-height: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+li div {
+    display: inline-block;
+    width: 50px;
+    color: rgba(124, 60, 60, 0.4);
+    font-size: 2.5rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 13px;
+    line-height: 2.7rem;
+    visibility: hidden;
 }
 
 li:nth-child(odd) {
     background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+}
+
+li:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
 }
 
 .main-container {
@@ -104,3 +125,4 @@ li:nth-child(odd) {
     display: flex;
     justify-content: center;
 }
+
