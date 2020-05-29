@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(-45deg, #ffcbcb, #d291bc, #aacfcf, #679b9b );
+    background-size: 400% 400%;
+    position: relative;
+
+    animation: change 10s ease-in-out infinite;
+
+    font-family:'Tajawal', sans-serif;
+    color: #ddd;
+
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+h1 {
+    font-size: 4rem;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    line-height: 3rem;
+}
+
+label {
+    margin: 20px;
+
+    font-size: 2rem;
+}
+
+input {
+    height: 50px;
+    width: 500px;
+    padding: 10px;
+    padding-left: 25px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 15px 15px;
+
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #eee;
+
+    font-size: 1.5rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    height: 50px;
+    width: 500px;
+    font-size: 1.5rem;
+}
+
+li:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+}
